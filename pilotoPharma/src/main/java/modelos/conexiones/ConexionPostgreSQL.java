@@ -21,15 +21,9 @@ public class ConexionPostgreSQL {
 			} catch (Exception e) {
 				System.out.println("[ERROR] -- modelos.conexiones.ConexionPostgreSQL.generarConexion " + e.toString());
 			}
-//			Creamos la conexion pasandole nuestra string de conexión
-			System.out.println("[INFO] Generando conexión a PostgreSQL");
-			conn = DriverManager.getConnection(connString, user, passw);
-			boolean esValida = conn.isValid(50000);
-			if(!esValida) {
-				System.out.println("[ERROR] -- modelos.conexiones.ConexionPostgreSQL.generarConexion -- La conexion no es valida, cerrando");
-				conn.close();
-				return conn;
-			}
+//			Creamos la conexion pasandole nuestra string de conexión			
+			conn = DriverManager.getConnection(connString, user, passw);	
+			
 			System.out.println("[INFO] -- modelos.conexiones.ConexionPostgreSQL.generarConexion -- Conexion creada correctamente, saliendo de generarConexion \n");						
 			
 		} catch (Exception e) {
