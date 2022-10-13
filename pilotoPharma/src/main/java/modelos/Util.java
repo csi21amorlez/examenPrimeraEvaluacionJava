@@ -1,4 +1,4 @@
-package examen_DisPharma_PruebaPiloto;
+package modelos;
 
 /*
  * Util --> En esta clase almacenaremos las variables de conexión a la base de datos.
